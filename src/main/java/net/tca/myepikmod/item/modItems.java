@@ -1,10 +1,11 @@
-package net.tca.myepikmod;
+package net.tca.myepikmod.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.tca.myepikmod.myepikmod;
 
 public class modItems {
     public static final DeferredRegister<Item> ITEMS =
