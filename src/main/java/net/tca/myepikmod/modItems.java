@@ -12,6 +12,8 @@ public class modItems {
 
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BANANANA = ITEMS.register("bananana",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
