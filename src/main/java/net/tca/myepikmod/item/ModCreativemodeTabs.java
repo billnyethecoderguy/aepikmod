@@ -15,18 +15,19 @@ public class ModCreativemodeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, myepikmod.modId);
 
-    public static final RegistryObject<CreativeModeTab> CENITE_TAB = CREATIVE_MODE_TABS.register("cenite_tab",
+    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("cenite_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(modItems.BANANA.get()))
                     .title(Component.translatable("creativetab.CENITE_TAB"))
                     .displayItems((pParameters, pOutput) -> {
-
                         pOutput.accept(modItems.BANANA.get());
 
                         pOutput.accept(ModBlocks.CENITE_BLOCK.get());
+
                     })
                     .build());
 
-    public static void register(IEventBus eventbus) {
-        CREATIVE_MODE_TABS.register(eventbus);
+
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TABS.register(eventBus);
     }
 }
