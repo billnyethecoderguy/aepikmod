@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "myfirstmod:block/cenite_block"
+    }
+  }
+}

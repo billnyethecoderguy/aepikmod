@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.tca.myepikmod.item.ModCreativemodeTabs;
 import net.tca.myepikmod.item.modItems;
 import org.slf4j.Logger;
 
@@ -23,6 +24,8 @@ public class myepikmod {
 
     public myepikmod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativemodeTabs.register(modEventBus);
 
         modItems.register(modEventBus);
 
@@ -40,7 +43,6 @@ public class myepikmod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(modItems.BANANA);
-            event.accept(modItems.BANANANA);
         }
     }
 
